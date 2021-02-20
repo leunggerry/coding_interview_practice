@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+#PDFS
+*.pdf
+
 # Object files
 *.o
 *.ko
