@@ -47,6 +47,25 @@ const _ = {
      }
      return false;
    },
+   words (string)
+   {
+     const words = string.split(' ');
+     return words;
+   },
+   pad (string, length)
+   {
+     // if the target length is smaller than string length
+     if (length < string.length)
+     {
+       return string;
+     }
+
+     let spacesToAddFront = Math.floor((length - string.length) / 2);
+     let spacesToAddEnd = (length -  (string.length + spacesToAddFront));
+     let padString = ' '.repeat(spacesToAddFront) + string + ' '.repeat(spacesToAddEnd);
+
+     return padString;
+    }
 };
 
 
