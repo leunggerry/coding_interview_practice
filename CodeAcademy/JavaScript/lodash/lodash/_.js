@@ -65,7 +65,42 @@ const _ = {
      let padString = ' '.repeat(spacesToAddFront) + string + ' '.repeat(spacesToAddEnd);
 
      return padString;
-    }
+   },
+   has (object, key)
+   {
+     if (object[key] != undefined)
+     {
+       return true;
+     }
+     return false;
+   },
+
+   invert (object)
+   {
+     let invertObj = {};
+     console.log(object);
+     for (let key in object)
+     {
+       invertObj[object[key]] = key;
+     }
+     console.log(invertObj);
+     return invertObj;
+   },
+
+   findKey (object, predicate)
+   {
+     for (let key in object)
+     {
+       let value = object[key];
+       let predicateReturnVal = predicate(value);
+
+       if (predicateReturnVal)
+       {
+         return key;
+       }
+     }
+     return undefined;
+  }
 };
 
 
