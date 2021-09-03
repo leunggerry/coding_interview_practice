@@ -100,6 +100,48 @@ const _ = {
        }
      }
      return undefined;
+  },
+  drop (arr, itemsToDrop)
+  {
+    console.log(arr);
+    if (itemsToDrop === undefined)
+    {
+      itemsToDrop = 1;
+    }
+
+    let newArr = arr.slice(itemsToDrop);
+    console.log(newArr);
+    return newArr;
+  },
+
+  dropWhile (arr, predicateFunc)
+  {
+    let dropNum = arr.findIndex((element, index) => !predicateFunc(element, index, arr));
+
+    console.log(dropNum);
+    let dropArr = this.drop(arr, dropNum);
+
+    console.log(dropArr);
+    return dropArr;
+  },
+
+  chunk (arr, size)
+  {
+    if (size == undefined)
+    {
+      size = 1;
+    }
+
+    let arrChunks = [];
+
+    for (i = 0; i < arr.length; i += size)
+    {
+      let arrayChunk = arr.slice(i, i + size);
+      console.log(arrayChunk);
+      arrChunks.push(arrayChunk)
+    }
+    return arrChunks;
+
   }
 };
 
