@@ -105,7 +105,6 @@ const mockUpStrand = () => {
 //console.log(p.willLikelySurvive());
 
 // test 7
-// @todo add if already in array check
 //
 const create30PAeqour = () =>
 {
@@ -119,19 +118,35 @@ const create30PAeqour = () =>
     tempP = pQeqourFactory(instanceIdx, mockUpStrand());
 
     //store sequence if it will likely survive
-    if (tempP.willLikelySurvive())
+    if (seqArr.findIndex(seq => seq === tempP) === -1)
     {
-      console.log(`InstanceIdx ${instanceIdx} pushing sequence ${tempP.dna}`);
-      seqArr.push(tempP);
-      instanceIdx++;
+      if (tempP.willLikelySurvive())
+      {
+        console.log(`InstanceIdx ${instanceIdx} pushing sequence ${tempP.dna}`);
+        seqArr.push(tempP);
+        instanceIdx++;
+      }
+      //dont store and regenerate a new sequence
+      // not necessary just for debugging
+      else
+      {
+        //console.log(`InstanceIdx ${instanceIdx} Sequence will likely not survive, redo sequence generation`);
+        continue;
+      }
     }
-    //dont store and regenerate a new sequence
+    // not necessary just for debugging
     else
     {
-      //console.log(`InstanceIdx ${instanceIdx} redo sequence generation`);
+      //console.log(`InstanceIdx ${instanceIdx} sequence already generated, redo sequence generation`);
       continue;
     }
   }
+  return seqArr;
 }
 
-create30PAeqour();
+const studyDownTheRoad = create30PAeqour();
+
+studyDownTheRoad.forEach(dnaSequence => 
+  {
+    console.log(dnaSequence);
+  });
