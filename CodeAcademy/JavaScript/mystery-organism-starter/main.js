@@ -4,27 +4,27 @@ const DNA_SEQUNCE_SIZE = 15;
 const pQeqourFactory = (id, dnaBaseArr) =>
 {
   return {
-    specimenNum : id,
-    dna : dnaBaseArr,
+    _specimenNum : id,
+    _dna : dnaBaseArr,
     mutate ()
     {
       let ran = Math.floor(Math.random() * DNA_SEQUNCE_SIZE);
       let dnaBases = ['A', 'T', 'C', 'G'];
       
       // take out the current base from possiblity of choosing that base
-      dnaBases = dnaBases.filter(base => base != this.dna[ran])
+      dnaBases = dnaBases.filter(base => base != this._dna[ran])
 
       // generate new base for that index
-      this.dna[ran] = dnaBases[Math.floor(Math.random() * 3)];
+      this._dna[ran] = dnaBases[Math.floor(Math.random() * 3)];
     },
 
     compareDNA(pAeqourDnaSeq)
     {
       let identCount = 0;
 
-      for (i = 0; i < this.dna.length; i++)
+      for (i = 0; i < this._dna.length; i++)
       {
-        if (this.dna[i] === pAeqourDnaSeq[i])
+        if (this._dna[i] === pAeqourDnaSeq[i])
         {
           identCount++;
         }
@@ -45,9 +45,9 @@ const pQeqourFactory = (id, dnaBaseArr) =>
     willLikelySurvive()
     {
       let countGAndCBases = 0;
-      for (i = 0; i < this.dna.length; i++)
+      for (i = 0; i < this._dna.length; i++)
       {
-        if ((this.dna[i] === 'G') || (this.dna[i] === 'C'))
+        if ((this._dna[i] === 'G') || (this._dna[i] === 'C'))
         {
           countGAndCBases++;
         }
@@ -58,6 +58,7 @@ const pQeqourFactory = (id, dnaBaseArr) =>
       return (percentage >= 60);
     }
   }
+  //complementStrand
 };
 /* Function Definitions ***********************************************************************/
 /**
@@ -150,3 +151,6 @@ studyDownTheRoad.forEach(dnaSequence =>
   {
     console.log(dnaSequence);
   });
+
+  // @todo create complement strand
+  // use compareDNA() to find the most related instances of pAequor
