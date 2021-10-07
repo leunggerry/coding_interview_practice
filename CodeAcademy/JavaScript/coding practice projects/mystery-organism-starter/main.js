@@ -1,3 +1,4 @@
+// @ts-check
 /* Constants **********************************************************************************/
 const DNA_SEQUNCE_SIZE = 15;
 /* Objects Definitions ************************************************************************/
@@ -17,13 +18,18 @@ const pQeqourFactory = (id, dnaBaseArr) =>
       // generate new base for that index
       this._dna[ran] = dnaBases[Math.floor(Math.random() * 3)];
     },
-
+    /**
+     * 
+     * @param {string[]} pAeqourDnaSeq 
+     */
     compareDNA(pAeqourDnaSeq)
     {
       let identCount = 0;
 
+      // @ts-ignore
       for (i = 0; i < this._dna.length; i++)
       {
+        // @ts-ignore
         if (this._dna[i] === pAeqourDnaSeq[i])
         {
           identCount++;
@@ -45,8 +51,10 @@ const pQeqourFactory = (id, dnaBaseArr) =>
     willLikelySurvive()
     {
       let countGAndCBases = 0;
+      // @ts-ignore
       for (i = 0; i < this._dna.length; i++)
       {
+        // @ts-ignore
         if ((this._dna[i] === 'G') || (this._dna[i] === 'C'))
         {
           countGAndCBases++;
@@ -151,6 +159,6 @@ studyDownTheRoad.forEach(dnaSequence =>
   {
     console.log(dnaSequence);
   });
-
+ 
   // @todo create complement strand
   // use compareDNA() to find the most related instances of pAequor

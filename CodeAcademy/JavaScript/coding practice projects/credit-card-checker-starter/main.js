@@ -30,8 +30,8 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
  * @name copyArray
  * 
  * @description copying the array to a temporary array
- * @param {*} arr 
- * @returns {*} temp
+ * @param {Number} arr 
+ * @returns {Array} temp
  */
 // Helper functions
 const copyArray = (arr) =>
@@ -48,8 +48,8 @@ const copyArray = (arr) =>
  * @name validateCred
  * @description Validate the credit card number using the Luhn Formula. The credit card number
  *              should be in an array format and returns True or False if card is valid
- * @param {*} cardNumArr 
- * @returns boolean
+ * @param {Array} cardNumArr 
+ * @returns {boolean}
  */
 const validateCred = (cardNumArr) =>
 {
@@ -84,8 +84,8 @@ const validateCred = (cardNumArr) =>
  * @name findInvalidCards
  * @description Given an array of credit card numbers, return a list of credit card numbers 
  *              that are invalid.
- * @param {*} creditCardsArr 
- * @returns {*} invalidCards
+ * @param {Array} creditCardsArr 
+ * @returns {Array} invalidCards
  */
 function findInvalidCards(creditCardsArr) 
 {
@@ -101,7 +101,7 @@ function findInvalidCards(creditCardsArr)
 
 /**
  * 
- * @param {*} invalidCreditCardsArr 
+ * @param {Array} invalidCreditCardsArr 
  * @returns 
  */
 function idInvalidCardCompanies(invalidCreditCardsArr)
