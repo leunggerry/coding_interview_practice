@@ -1,42 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+  <title>Cheat Sheet</title>
+  <link rel="stylesheet" href="./style.css" type="text/css" />
+</head>
+
+<body>
+
   <head>
-    <title>Cheat Sheet</title>
-    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <h1>Welcome to Gerry's Cheat Sheet</h1>
+    <aside>
+      <nav>
+        <ul>
+          <li><a href="#html-seciton">HTML</a></li>
+          <li><a href="#css-section">CSS</a></li>
+          <li><a href="#javascript-section">JavaScript</a></li>
+        </ul>
+      </nav>
+    </aside>
   </head>
-  <body>
-    <head>
-      <h1>Welcome to Gerry's Cheat Sheet</h1>
-      <aside>
-        <nav>
-          <ul>
-            <li><a href="#html-seciton">HTML</a></li>
-            <li><a href="#css-section">CSS</a></li>
-            <li><a href="#javascript-section">JavaScript</a></li>
-          </ul>
-        </nav>
-      </aside>
-    </head>
 
-    <!-- HTML section of the cheat sheet-->
-    <section id="html-section">
-      <h3>HTML</h3>
-      <article></article>
-    </section>
+  <!-- HTML section of the cheat sheet-->
+  <section class="html-section" id="html-section">
+    <h2 id="html-section-heading">HTML</h2>
+    <h3>Antomy of HTML</h3>
+    <h4>Head</h4>
+    <p>
+      The HTML head is the contents of the &lt;head&gt; element. Not like the not like the
+      &lt;p&gt; the contents of the head will not be displayed. Head contains meta data about the
+      document. Things included in the head element.
+    </p>
 
-    <!-- CSS section of the cheat sheet-->
-    <section id="css-section">
-      <h3>CSS</h3>
-      <article></article>
-    </section>
+    <table id="head-element-table">
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Description</th>
+          <th>Additional Attributes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&lt;meta&gt;</td>
+          <td>Data that describes the data. Will tell who wrote it and the summary</td>
+          <td>charset, content, http-equiv, name</td>
+        </tr>
+        <tr>
+          <td>&lt;title&gt;</td>
+          <td>Title of the page that you would see in the tab header section</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <!-- JavaScript section -->
-    <section id="javascript-section">
-      <h3>JavaScript</h3>
-      <article></article>
+    <section id="html-section-general-tags">
+      <h4>Heading Elements &lt;h1&gt; - &lt;h6&gt;</h4>
+      <p>
+        There are 6 levels of section headings &lt;h1&gt; to &lt;h6&gt;. There are no additional
+        attributes.
+      </p>
+      <h4>Header &lt;header&gt;</h4>
+      <p>
+        &lt;header&gt; HTML element represents indrocucotry content, usually a group of
+        navigational aids. It can also contain heading elements but also a log, a search form, an
+        author name and other elements.
+      </p>
+      <h4>Nav &lt;nav&gt;</h4>
+      <p>
+        The HTML element repsents the section of a page whose purpose is toprovide navigation
+        links, either within the current document or to other documents. For example, navigations
+        sections are menus, tables of contents, and indexes.
+      </p>
+      <h4>Table &lt;table&gt;</h4>
+      <p>
+        Table is used to represent tablular data that is information presented in two dimensional
+        table.<br>
+        With the table attribute there are extra elements to create the table structure.
+      <table>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Description</th>
+            <th>Additional Attributes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>&lt;th&gt;</td>
+            <td>Row Header</td>
+          </tr>
+          <tr>
+            <td>&lt;tr&gt;</td>
+            <td>Row Description</td>
+          </tr>
+          <tr>
+            <td>&lt;td&gt;</td>
+            <td>Cell Data Description</td>
+          </tr>
+        </tbody>
+      </table>
+      <strong>Attributes</strong>: Has global attributes
+      </p>
     </section>
-  </body>
-  <footer>
-    <nav></nav>
-  </footer>
+    <article></article>
+
+    <h4>Links</h4>
+  </section>
+
+  <!-- CSS section of the cheat sheet-->
+  <section id="css-section">
+    <h2 id="css-section-heading">CSS</h2>
+    <article></article>
+
+    <h4>Links</h4>
+  </section>
+
+  <!-- JavaScript section -->
+  <section id="javascript-section">
+    <h2 id="javascript-section-heading">JavaScript</h2>
+    <article></article>
+
+    <h4>Links</h4>
+  </section>
+</body>
+<footer>
+  Author: Gerry Leung Contact: leunghg@gmail.com Github Profile:
+  <a href="https://github.com/leunggerry"> Github</a>
+</footer>
+
 </html>

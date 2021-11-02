@@ -1,0 +1,35 @@
+* {
+  background-color: cornsilk;
+  font-family: Helvetica;
+  color: black;
+}
+
+table {
+  border: 2px solid black;
+  border-spacing: 2px;
+  text-align: start;
+  width: 650px;
+  box-sizing: border-box;
+}
+th {
+  background-color: greenyellow;
+  display: table-cell;
+  font-weight: bold;
+}
+
+h1 {
+  background-color: darkseagreen;
+  text-align: center;
+}
+
+#html-section-heading {
+  background-color: grey;
+}
+
+#css-section-heading {
+  background-color: lightblue;
+}
+
+#javascript-section-heading {
+  background-color: lightgreen;
+}
