@@ -11,7 +11,7 @@
   <head>
     <h1>Welcome to Gerry's Cheat Sheet</h1>
     <aside>
-      <nav>
+      <nav class="header">
         <ul>
           <li><a href="#html-seciton">HTML</a></li>
           <li><a href="#css-section">CSS</a></li>
@@ -20,6 +20,7 @@
       </nav>
     </aside>
   </head>
+
 
   <!-- HTML section of the cheat sheet-->
   <section class="html-section" id="html-section">
@@ -105,14 +106,134 @@
     <article></article>
 
     <h4>Links</h4>
+    <p>
+    <ul>
+      <li><a href="https://www.internetingishard.com/html-and-css/semantic-html/">Semantic HTML</a>
+      </li>EO
+    </ul>
+    </p>
   </section>
 
   <!-- CSS section of the cheat sheet-->
   <section id="css-section">
     <h2 id="css-section-heading">CSS</h2>
-    <article></article>
+    <div class="color">
+      <h4>Color</h4>
+      <img
+        src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngitem.com%2Fmiddle%2FmTbbwJ_color-wheel-rgb-values-hd-png-download%2F&psig=AOvVaw1XdgsN-RkTAMcEXo5RfKu0&ust=1636812492924000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNje5e__kvQCFQAAAAAdAAAAABAD" />
+      <table id="css-colour-table">
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Example</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>hsl</td>
+          <td>hsl(120, 10%, 12%)</td>
+          <td>
+            <ul>
+              <li>Hue -is the first number. It refers to an angle on a color wheel. Red is 0
+                degrees,
+                Green is 120 degrees, Blue is 240 degrees, and then back to Red at 360. Colour <a
+                  href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F50819434%2Fconvert-rgb-values-to-color-wheel-coordinates&psig=AOvVaw0yRmY4Hc7vgF51C9f7m1XA&ust=1636756872568000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJiQ5dGwkfQCFQAAAAAdAAAAABAE">wheel</a>
+              </li>
+              <li>Saturation - refers to the intensity or purity of the color. The saturation
+                increases towards 100% as the color becomes richer. The saturation decreases towards
+                0% as the color becomes grayer.</li>
+              <li>Lightness - refers to how light or dark the color is. Halfway, or 50%, is normal
+                lightness. Imagine a sliding dimmer on a light switch that starts halfway. Sliding
+                the
+                dimmer up towards 100% makes the color lighter, closer to white. Sliding the dimmer
+                down towards 0% makes the color darker, closer to black.</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>hsla, rbga, transparent - opacity</td>
+          <td>
+            <ul>
+              <li>hsl(120, 10%, 12%, 0.1)</li>
+              <li>rgba(234, 45, 98, 0.33)</li>
+              <li>color: transparent</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Fourth Param - between 0 and 1 represent the opacity</li>
+              <li>Frist 3 values work the same as hsl, the fourth is the <em>alpha</em>
+                is sometimes called opacity</li>
+              <li>There is, however, a named color keyword for zero opacity, transparent. It’s
+                equivalent to rgba(0, 0, 0, 0), and it’s used like any other color keyword</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
 
+    <div class="box-model">
+      <h4>The Box Model</h4>
+      <p></p>
+      <table id="box-model-attributes">
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Description</th>
+            <th>Example</th>
+            <th>Links</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Height & Width</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Borders</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Border Radius</td>
+          <tr></tr>
+          </tr>
+          <tr>
+            <td>Padding</td>
+          </tr>
+          <tr>
+            <td>Padding Shorthand</td>
+          </tr>
+          <tr>
+            <td>Margins</td>
+          </tr>
+          <tr>
+            <td>Margin Shorthand</td>
+          </tr>
+          <tr>
+            <td>Auto</td>
+          </tr>
+          <tr>
+            <td>Margin Collapse</td>
+          </tr>
+          <tr>
+            <td>Minimum/Maximum Height and Width</td>
+          </tr>
+          <tr>
+            <td>Overflow</td>
+          </tr>
+
+          <tr>
+            <td>Visibility</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h4>Links</h4>
+    <p>
+    <ul>
+      <li><a href="https://maintainablecss.com/">Maintainable CSS</a></li>
+    </ul>
+    </p>
   </section>
 
   <!-- JavaScript section -->

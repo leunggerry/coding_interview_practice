@@ -1,5 +1,6 @@
-* {
-  background-color: cornsilk;
+/* Universal styles*/
+html {
+  background-color: #ffffff;
   font-family: Helvetica;
   color: black;
 }
@@ -33,3 +34,14 @@ h1 {
 #javascript-section-heading {
   background-color: lightgreen;
 }
+
+/* Header */
+.header li {
+  display: inline-block;
+  top: 0px;
+  width: 100%;
+  z-index: 5;
+}
+/* Main */
+
+/* Footer */
